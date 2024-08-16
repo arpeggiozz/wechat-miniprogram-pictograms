@@ -1,0 +1,45 @@
+pan-gesture-handler, vertical-drag-gesture-handler {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.safe-area-inset-bottom {
+  height: env(safe-area-inset-bottom);
+}
+
+.comment-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.comment-header {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 0;
+}
+.comment-handler {
+  width: 50px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #EEE;
+  margin: 0 auto 10px;
+}
+.comment-list {
+  flex: 1;
+  overflow: hidden;
+}
+.comment-item {
+  padding: 0 20px 20px;
+  font-size: 13px;
+  line-height: 1.4;
+}

@@ -1,0 +1,13 @@
+{
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "navigationBarTitleText": "学习",
+  "componentFramework": "glass-easel",
+  "renderer": "skyline",
+  "navigationStyle": "custom",
+  "disableScroll": true,
+  "usingComponents": {
+    "sliding-tabs": "/components/sliding-tabs/index",
+    "album": "/components/album/index",
+    "address-book-slider": "/components/address-book-slider/index"
+  }
+}

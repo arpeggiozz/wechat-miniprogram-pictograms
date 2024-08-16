@@ -1,0 +1,32 @@
+.tab-list {
+    display: flex;
+    flex-direction: row;
+    margin: 0 24px;
+    position: relative;
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+    height: 50px;
+    border-bottom: 0.5px solid white;
+}
+
+.tab-item.active {
+    color: #07c160;
+}
+
+.tab-border {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #07c160;
+    width: 50%;
+    transform: translateX(0) scaleX(0.7);
+    z-index: 1;
+}

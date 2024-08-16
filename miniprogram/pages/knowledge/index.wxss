@@ -1,0 +1,27 @@
+.knowledge-page {
+    /* border: 1px solid magenta; */
+}
+
+.knowledge-filter {
+  margin-bottom: 16px;
+}
+
+.hs-container {
+    position: absolute;
+    top: 0px;
+}
+
+.swiper-container {
+    flex: 1;
+    margin-bottom: 72px;
+}
+
+.album {
+    height: 0;
+    flex: 1;
+    margin-bottom: 12px;
+}
+
+.safe-area-inset-bottom {
+    height: env(safe-area-inset-bottom);
+}

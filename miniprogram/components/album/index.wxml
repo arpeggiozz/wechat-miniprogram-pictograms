@@ -1,0 +1,35 @@
+  <scroll-view
+    class="scroll-list"
+    scroll-y
+    type="custom"
+    scroll-into-view="{{scrollIntoView}}"
+    scroll-into-view-alignment="nearest"
+  >
+    <slot name="header"></slot>
+    <view
+      wx:for="{{showList}}"
+      wx:key="index"
+      wx:for-item="line"
+      id="line-{{index}}"
+      class="line"
+      style="padding-bottom: {{imageMargin + 20}}px;"
+    >
+      <view
+        wx:for="{{line.list}}"
+        wx:key="id"
+        style="width: {{imageWidth}}px; height: {{imageWidth}}px; margin: 0 {{imageMargin / 2}}px;"
+      >
+        <album-image
+          class="album-image"
+          image="{{item}}"
+          src="{{item.src}}"
+          width="{{imageWidth}}"
+          height="{{imageWidth}}"
+          data-index="{{item.index}}"
+          bindtap="onTapImage"
+        ></album-image>
+        <view class="image-title">{{ item.title }}</view>
+      </view>
+      <view wx:if="{{line.list.length < lineLimit}}" style="width: {{imageWidth}}px; margin: 0 {{imageMargin / 2}}px;"></view>
+    </view>
+  </scroll-view>

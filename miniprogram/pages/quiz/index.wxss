@@ -1,0 +1,39 @@
+.quiz-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+movable-area {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+movable-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    text-align: center;
+    font-size: 13px;
+}
+
+.sports-todo {
+    border: 1px dashed #ccc;
+}
+
+.refresh-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+}
+
+.hint-container {
+    width: 100%;
+    text-align: center;
+    color: #666;
+}

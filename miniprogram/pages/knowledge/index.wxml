@@ -1,0 +1,33 @@
+<!-- pages/knowledge/index.wxml -->
+<mp-navigation-bar title="历届奥运体育图标" back="{{false}}"></mp-navigation-bar>
+<view class="knowledge-filter">
+  <sliding-tabs tabs="{{ tabs }}" value="{{ filterTab }}" bindchange="onTabChange"></sliding-tabs>
+  <address-book-slider alphabet="{{ sliderOptions }}" current-key="{{ currentKey }}" bindchange="handleSliderChange"></address-book-slider>
+</view>
+<swiper
+  duration="{{400}}"
+  cache-extent="0"
+  current="{{current}}"
+  scroll-with-animation="{{false}}"
+  bindchange="handleSwiper"
+  class="swiper-container"
+>
+  <swiper-item wx:for="{{contents}}" wx:key="key">
+    <album
+      wx:if="{{ index === current || index === current - 1 || index === current + 1 }}"
+      class="album"
+      list="{{item.list}}"
+      imageWidth="{{imageWidth}}"
+      imageMargin="{{imageMargin}}"
+      lineLimit="{{lineLimit}}"
+      bindpreview="handlePreview"
+    ></album>
+  </swiper-item>
+</swiper>
+<view class="safe-area-inset-bottom"></view>
+<view class="hs-container" style="top: {{ 0 - halfScreenOffset }}px">
+  <segmented-half-screen bottomOffset="{{ halfScreenOffset }}" title="{{ currentKey }}">
+    <!-- 本届奥运会的体育图标设计理念是... -->
+    <text slot="content">{{currentDetailDesc}}</text>
+  </segmented-half-screen>
+</view>

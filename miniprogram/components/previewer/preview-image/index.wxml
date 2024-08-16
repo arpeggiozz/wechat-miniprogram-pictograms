@@ -1,0 +1,14 @@
+<double-tap-gesture-handler class="double-tap-gesture-handler" worklet:ongesture="onDoubleTap">
+  <view id="image" class="{{ isWebview ? 'image-wrapper--webview' : 'image-wrapper'}}">
+    <image
+      wx:if="{{status}}"
+      class="image"
+      src="{{image.src}}"
+      mode="aspectFit"
+      bindload="onImgLoad"
+    ></image>
+    <view class="image-preview-title">
+    {{ image.title }}
+    </view>
+  </view>
+</double-tap-gesture-handler>

@@ -1,0 +1,9 @@
+<view class="tab-list">
+    <view wx:for="{{tabs}}" wx:key="title" class="tab-item {{selectedTab === index ? 'active' : ''}}" data-tab="{{index}}" bindtap="onTapTab">
+        <view>{{ item.title }}</view>
+    </view>
+    <view class="tab-border" style="transform: translateX({{translateX}}px) scaleX(0.7); width: {{ 100 / tabs.length }}%;"></view>
+</view>
+<swiper class="scroll-list" current="{{selectedTab}}" bind:change="onTabChanged" worklet:onscrollstart="onTabTransition" worklet:onscrollupdate="onTabTransition" worklet:onscrollend="onTabTransitionEnd" duration="{{400}}" cache-extent="1" style="height: auto;">
+    <swiper-item wx:for="{{tabs}}" wx:key="title"></swiper-item>
+</swiper>

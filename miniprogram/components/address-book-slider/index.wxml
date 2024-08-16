@@ -1,0 +1,21 @@
+<root-portal>
+  <!-- 这里也可以用 pan-gesture-handler -->
+  <view class="wx-flex right-directory" catch:touchstart='handlePan' catch:touchmove='handlePan' catch:touchend='cancelPan'>
+    <view class="anchor-bar">
+      <view class="anchor-list">
+        <block wx:for="{{alphabet}}" wx:key="*this" wx:for-item="alpha">
+          <view data-alpha="{{alpha.label}}">
+            <view class="anchor-item {{current == alpha.label ? ( touching ? 'selected tapped' : 'selected' ): ''}}">
+              <view class="anchor-item__inner">
+                {{ current === alpha.label ? '' : alpha.abbr}}
+              </view>
+              <!-- 设置了 white-space: pre，注意空白换行 -->
+              <view class="anchor-item__pop">{{alpha.label}}<view class="anchor-item__pop_after"></view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</root-portal>

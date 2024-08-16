@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/quiz/index",
+    "pages/knowledge/index",
+    "pages/preview/index"
+  ],
+  "usingComponents": {
+    "mp-navigation-bar": "/components/navigation-bar/navigation-bar",
+    "segmented-half-screen": "/components/segmented-half-screen/index"
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "2024 猜猜体育图标",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#A2A9B0",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/quiz/index",
+        "text": "问答",
+        "iconPath": "images/icons/business.png",
+        "selectedIconPath": "images/icons/business-active.png"
+      },
+      {
+        "pagePath": "pages/knowledge/index",
+        "text": "一览",
+        "iconPath": "images/icons/icon_component.png",
+        "selectedIconPath": "images/icons/icon_component_HL.png"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": "latest"
+  },
+  "renderer": "skyline",
+  "componentFramework": "glass-easel",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "defaultContentBox": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  }
+}

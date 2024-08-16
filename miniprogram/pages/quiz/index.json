@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "navigationBarTitleText": "问答",
+  "componentFramework": "glass-easel",
+  "renderer": "webview",
+  "navigationStyle": "custom",
+  "enablePassiveEvent": false,
+  "usingComponents": {
+    "custom-timer": "/components/custom-timer/index"
+  }
+}

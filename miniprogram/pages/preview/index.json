@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "previewer": "/components/previewer/index"
+  },
+  "backgroundColorContent": "#fff",
+  "disableScroll": true,
+  "componentFramework": "glass-easel",
+  "renderer": "skyline",
+  "navigationStyle": "custom"
+}

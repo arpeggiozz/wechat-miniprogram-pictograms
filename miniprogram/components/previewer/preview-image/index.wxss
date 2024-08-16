@@ -1,0 +1,44 @@
+.double-tap-gesture-handler {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  will-change: transform;
+  text-align: center;
+}
+
+.image-wrapper--webview {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  transform-origin: center;
+  will-change: transform;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-preview-title {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.image-wrapper--webview .image-preview-title {
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+}

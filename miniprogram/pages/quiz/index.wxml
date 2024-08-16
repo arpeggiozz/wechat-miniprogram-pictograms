@@ -1,0 +1,26 @@
+<!-- pages/quiz/index.wxml -->
+<mp-navigation-bar title="猜一猜" back="{{false}}"></mp-navigation-bar>
+<view class="quiz-page">
+  <view>
+    <custom-timer id="custom-timer" status="{{ timerStatus }}"></custom-timer>
+  </view>
+  <movable-area class="movable-area">
+    <movable-view class="{{ quizs[index].solved ? '' : 'sports-todo' }}" wx:for="{{gridPositions}}" wx:key="index" x="{{item.x}}" y="{{item.y}}" direction="none" style="width: {{imgSize}}px; height: {{imgSize}}px" data-index="{{index}}" bindtap="handleTap">
+      <image hidden="{{ !quizs[index].solved }}" src="{{ quizs[index].imgSrc }}" mode="aspectFit"></image>
+      <view wx:if="{{ !quizs[index].solved }}">{{ quizs[index].key }}</view>
+    </movable-view>
+    <movable-view wx:if="{{ !changing }}" x="{{movablePosition.x}}" y="{{movablePosition.y}}" direction="all" disabled="{{ completed }}" style="width: {{imgSize}}px; height: {{imgSize}}px" bindchange="handleChange">
+      <image wx:if="{{ !completed }}" src="{{ quizs[current].imgSrc }}" mode="aspectFit"></image>
+      <view wx:else>🎉🎉🎉
+        <view>{{quizs[0].olympic}}</view>
+      </view>
+    </movable-view>
+    <view class="refresh-container" style="top: {{ btnPositionTop }}px;">
+      <button size="mini" bindtap="handleMore">
+        了解更多 {{quizs[0].olympic}} 体育图标
+      </button>
+      <view wx:if="{{ showHint }}" class="hint-container">拖动中间图标来匹配运动图标与项目</view>
+      <button wx:if="{{showButton}}" size="mini" type="primary" bindtap="handleNext">换一换</button>
+    </view>
+  </movable-area>
+</view>
